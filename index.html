@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>학습 목표 설정 챗봇</title>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="chatbot-container">
+        <div class="chat-header">
+          <h1>📚 오늘의 학습 목표 설정</h1>
+          <p>AI 챗봇과 함께 오늘의 공부 계획을 세워보세요!</p>
+        </div>
+        
+        <!-- 학번/이름 입력 섹션 -->
+        <div class="user-info-section" id="userInfoSection">
+          <div class="user-info-form">
+            <h3>👤 사용자 정보</h3>
+            <div class="info-input-group">
+              <label for="studentId">학번:</label>
+              <input type="text" id="studentId" placeholder="학번을 입력하세요" required />
+            </div>
+            <div class="info-input-group">
+              <label for="userName">이름:</label>
+              <input type="text" id="userName" placeholder="이름을 입력하세요" required />
+            </div>
+            <button id="startChatButton" class="start-chat-button">
+              ✅ 정보 입력 완료 - 대화 시작
+            </button>
+          </div>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages" style="display: none;">
+          <div class="message bot-message">
+            <div class="message-content">
+              안녕하세요! 오늘 공부 목표를 함께 세워볼까요? 어떤 과목을 공부할 예정인가요?
+            </div>
+            <div class="message-time"></div>
+          </div>
+        </div>
+        
+        <div class="chat-input-container" id="chatInputContainer" style="display: none;">
+          <div class="input-group">
+            <input type="text" id="messageInput" placeholder="메시지를 입력하세요..." />
+            <button id="sendButton">전송</button>
+          </div>
+          <div class="action-buttons">
+            <button id="submitToForm" class="submit-button" disabled>
+              📝 Google Form에 대화내용 제출
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
