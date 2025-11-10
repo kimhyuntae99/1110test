@@ -4,8 +4,8 @@
 
 1. https://forms.google.com 접속
 2. "빈 양식" 클릭
-3. 제목: "학습 목표 설정 대화 기록"
-4. 설명: "챗봇과의 대화 내용이 자동으로 기록됩니다"
+3. 제목: "AI 진로 상담 대화 기록"
+4. 설명: "AI 상담사와의 진로 상담 내용이 자동으로 기록됩니다"
 
 ## 2. 질문 추가
 
@@ -19,8 +19,8 @@ Google Form에 다음 3개의 질문을 추가해야 합니다:
    - 질문 제목: "이름"
    - "필수" 옵션 체크
 
-3. **대화 내용** (장문형)
-   - 질문 제목: "대화 내용"
+3. **상담 내용** (장문형)
+   - 질문 제목: "진로 상담 내용"
    - "필수" 옵션 체크
 
 ## 3. Entry ID 찾기
@@ -33,7 +33,7 @@ Google Form에 다음 3개의 질문을 추가해야 합니다:
 3. `entry.` 검색하여 3개의 entry 번호 확인:
    - 학번: entry.877816296
    - 이름: entry.1590256368  
-   - 대화내용: entry.1968981508
+   - 진로상담내용: entry.1968981508
 
 ### 방법 2: 개발자 도구 사용
 1. 양식 미리보기 페이지에서 F12 키 누르기
@@ -55,7 +55,7 @@ Form ID는 `1FAIpQLSd_` 뒤의 긴 문자열입니다.
 `.env` 파일에 다음과 같이 설정:
 
 ```env
-VITE_GOOGLE_FORM_URL=https://docs.google.com/forms/u/0/d/e/1FAIpQLSd_YOUR_FORM_ID_HERE/formResponse
+VITE_GOOGLE_FORM_URL=https://docs.google.com/forms/d/e/1FAIpQLSfetkQ9CCszyUePt2IsEgiXCk_OZrRrFCcvp_8AXB_u5utpEQ/formResponse
 VITE_FORM_ENTRY_CONVERSATION=entry.1968981508
 VITE_FORM_ENTRY_STUDENT_ID=entry.877816296
 VITE_FORM_ENTRY_NAME=entry.1590256368
@@ -63,9 +63,14 @@ VITE_FORM_ENTRY_NAME=entry.1590256368
 
 ## 6. 테스트
 
-1. 챗봇에서 몇 개의 메시지 교환
-2. "Google Form에 대화내용 제출" 버튼 클릭
-3. Google Form 응답 탭에서 제출된 내용 확인
+1. 챗봇에서 학번과 이름을 입력
+2. 몇 개의 진로 상담 메시지 교환
+3. "Google Form에 진로 상담 내용 제출" 버튼 클릭
+4. Google Form 응답 탭에서 제출된 내용 확인
+
+**현재 설정된 Google Form**: 
+- URL: https://docs.google.com/forms/d/e/1FAIpQLSfetkQ9CCszyUePt2IsEgiXCk_OZrRrFCcvp_8AXB_u5utpEQ/formResponse
+- 해당 Form의 응답 페이지에서 제출된 데이터를 확인할 수 있습니다.
 
 ## 문제 해결
 

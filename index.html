@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>학습 목표 설정 챗봇</title>
+    <title>AI 진로 상담 챗봇</title>
     <link rel="stylesheet" href="/src/style.css">
   </head>
   <body>
     <div id="app">
       <div class="chatbot-container">
         <div class="chat-header">
-          <h1>📚 오늘의 학습 목표 설정</h1>
-          <p>AI 챗봇과 함께 오늘의 공부 계획을 세워보세요!</p>
+          <h1>🎯 AI 진로 상담 챗봇</h1>
+          <p>AI 상담사와 함께 나의 진로를 탐색하고 계획을 세워보세요!</p>
         </div>
         
         <!-- 학번/이름 입력 섹션 -->
@@ -28,7 +28,7 @@
               <input type="text" id="userName" placeholder="이름을 입력하세요" required />
             </div>
             <button id="startChatButton" class="start-chat-button">
-              ✅ 정보 입력 완료 - 대화 시작
+              ✅ 정보 입력 완료 - 진로 상담 시작
             </button>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="chat-messages" id="chatMessages" style="display: none;">
           <div class="message bot-message">
             <div class="message-content">
-              안녕하세요! 오늘 공부 목표를 함께 세워볼까요? 어떤 과목을 공부할 예정인가요?
+              안녕하세요! 진로 상담을 도와드릴 AI 상담사입니다. 현재 고민하고 있는 진로나 관심 분야가 있으신가요?
             </div>
             <div class="message-time"></div>
           </div>
@@ -49,7 +49,7 @@
           </div>
           <div class="action-buttons">
             <button id="submitToForm" class="submit-button" disabled>
-              📝 Google Form에 대화내용 제출
+              📝 Google Form에 진로 상담 내용 제출
             </button>
           </div>
         </div>
